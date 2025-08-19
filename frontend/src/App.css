@@ -1,0 +1,90 @@
+/* App.css - Estilos globales para la aplicación educativa */
+
+.App {
+  min-height: 100vh;
+}
+
+/* Estilos adicionales para mejorar la experiencia educativa */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para mejorar la legibilidad en contenido educativo */
+.prose {
+  max-width: none;
+}
+
+.prose h1,
+.prose h2,
+.prose h3 {
+  color: rgb(17 24 39); /* gray-900 */
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.prose code {
+  background-color: rgb(243 244 246); /* gray-100 */
+  padding: 0.125rem 0.25rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.prose pre {
+  background-color: rgb(31 41 55); /* gray-800 */
+  color: rgb(243 244 246); /* gray-100 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.prose ul,
+.prose ol {
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* Transiciones suaves para elementos interactivos */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Mejoras para elementos de enfoque */
+.focus-visible:focus {
+  outline: 2px solid rgb(59 130 246); /* blue-500 */
+  outline-offset: 2px;
+}
+
+/* Estilos para elementos educativos */
+.educational-highlight {
+  background: linear-gradient(120deg, #a78bfa 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.educational-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.educational-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+} 
