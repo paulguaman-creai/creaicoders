@@ -1,0 +1,583 @@
+{
+	"info": {
+		"_postman_id": "jsonplaceholder-collection",
+		"name": "JSONPlaceholder - APIs REST",
+		"description": "Colección completa para probar todos los métodos HTTP con JSONPlaceholder. Incluye ejemplos de GET, POST, PUT y DELETE.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "📝 Posts",
+			"item": [
+				{
+					"name": "GET - Obtener todos los posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Obtiene una lista de todos los posts disponibles (100 posts)"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Obtener post por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Obtiene un post específico por su ID"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Posts de un usuario específico",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene todos los posts de un usuario específico usando query parameters"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - Crear nuevo post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Mi primer post\",\n  \"body\": \"Este es el contenido de mi post creado desde Postman\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Crea un nuevo post. El servidor responderá con el post creado y un ID asignado"
+					},
+					"response": []
+				},
+				{
+					"name": "PUT - Actualizar post existente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1,\n  \"title\": \"Título actualizado desde Postman\",\n  \"body\": \"Contenido completamente actualizado\",\n  \"userId\": 1\n}"
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Actualiza completamente un post existente. Necesitas incluir todos los campos"
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH - Actualizar parcialmente post",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Solo actualizo el título\"\n}"
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Actualiza solo algunos campos del post. Es más eficiente que PUT cuando solo quieres cambiar algunos valores"
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE - Eliminar post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1"
+							]
+						},
+						"description": "Elimina un post específico. El servidor responderá con un objeto vacío {}"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para gestionar posts (CRUD completo)"
+		},
+		{
+			"name": "👥 Usuarios",
+			"item": [
+				{
+					"name": "GET - Obtener todos los usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/users",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						},
+						"description": "Obtiene la lista completa de usuarios con información detallada"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Usuario por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/users/1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"users",
+								"1"
+							]
+						},
+						"description": "Obtiene información detallada de un usuario específico"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para obtener información de usuarios"
+		},
+		{
+			"name": "💬 Comentarios",
+			"item": [
+				{
+					"name": "GET - Todos los comentarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/comments",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"comments"
+							]
+						},
+						"description": "Obtiene todos los comentarios de todos los posts"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Comentarios de un post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts/1/comments",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts",
+								"1",
+								"comments"
+							]
+						},
+						"description": "Obtiene todos los comentarios de un post específico"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Comentarios por post ID (query)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/comments?postId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"comments"
+							],
+							"query": [
+								{
+									"key": "postId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene comentarios usando query parameter postId"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para obtener comentarios de posts"
+		},
+		{
+			"name": "✅ Todos (Tareas)",
+			"item": [
+				{
+					"name": "GET - Todas las tareas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							]
+						},
+						"description": "Obtiene la lista completa de tareas"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Tareas de un usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?userId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene todas las tareas de un usuario específico"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Tareas completadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/todos?completed=true",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"todos"
+							],
+							"query": [
+								{
+									"key": "completed",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Obtiene solo las tareas que están completadas"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para obtener tareas y filtrarlas"
+		},
+		{
+			"name": "🖼️ Álbumes",
+			"item": [
+				{
+					"name": "GET - Todos los álbumes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/albums",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"albums"
+							]
+						},
+						"description": "Obtiene la lista de todos los álbumes"
+					},
+					"response": []
+				},
+				{
+					"name": "GET - Álbumes de un usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/albums?userId=1",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"albums"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Obtiene todos los álbumes de un usuario específico"
+					},
+					"response": []
+				}
+			],
+			"description": "Endpoints para obtener información de álbumes"
+		},
+		{
+			"name": "🔍 Ejemplos Avanzados",
+			"item": [
+				{
+					"name": "GET - Combinar múltiples filtros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts?userId=1&_limit=5",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "_limit",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Combina múltiples query parameters: userId=1 y limita a 5 resultados"
+					},
+					"response": []
+				},
+				{
+					"name": "POST - Crear con datos personalizados",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Mi post personalizado\",\n  \"body\": \"Este es un post creado con datos personalizados desde Postman\",\n  \"userId\": 5,\n  \"tags\": [\"personalizado\", \"postman\", \"api\"],\n  \"rating\": 5\n}"
+						},
+						"url": {
+							"raw": "https://jsonplaceholder.typicode.com/posts",
+							"protocol": "https",
+							"host": [
+								"jsonplaceholder",
+								"typicode",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						},
+						"description": "Crea un post con datos personalizados adicionales. Observa cómo el servidor responde"
+					},
+					"response": []
+				}
+			],
+			"description": "Ejemplos más avanzados combinando filtros y datos personalizados"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Script que se ejecuta antes de cada request",
+					"console.log('Enviando request a: ' + pm.request.url);",
+					"console.log('Método: ' + pm.request.method);"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"// Script que se ejecuta después de cada response",
+					"pm.test('Status code es 200', function () {",
+					"    pm.response.to.have.status(200);",
+					"});",
+					"",
+					"pm.test('Response time es menor a 2000ms', function () {",
+					"    pm.expect(pm.response.responseTime).to.be.below(2000);",
+					"});",
+					"",
+					"pm.test('Response tiene contenido', function () {",
+					"    pm.response.to.not.be.error;",
+					"    pm.response.to.have.jsonBody();",
+					"});",
+					"",
+					"// Log de información útil",
+					"console.log('Response time: ' + pm.response.responseTime + 'ms');",
+					"console.log('Status: ' + pm.response.status);"
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "https://jsonplaceholder.typicode.com",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "post_id",
+			"value": "1",
+			"type": "string"
+		}
+	]
+}
