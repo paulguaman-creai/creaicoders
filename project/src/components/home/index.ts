@@ -5,3 +5,4 @@ export { default as PostmanExamples } from './PostmanExamples';
 export { default as PostmanSteps } from './PostmanSteps';
 export { default as HttpMethods } from './HttpMethods';
 export { default as Footer } from './Footer';
+export { default as Paul } from './Paul';
